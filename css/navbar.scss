@@ -1,0 +1,17 @@
+.navbar {
+    background-color: #01040a;
+    a.navbar-brand img {
+        height: 50px;
+    }
+    a.nav-link {
+        font-weight: bold;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0!important;
+    }
+    a.nav-link:hover {
+        opacity: .8;
+    }
+    a.nav-link.active {
+        // border-bottom: 2px solid red;
+    }
+}

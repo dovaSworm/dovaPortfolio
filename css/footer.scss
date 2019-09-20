@@ -1,0 +1,14 @@
+$small-device: 768px;
+@mixin small-device {
+    @media(max-width: #{$small-device}) {
+        @content;
+    }
+}
+
+footer {
+    height: 200px;
+    a img {
+        margin: auto;
+        height: 100px;
+    }
+}

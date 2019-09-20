@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap");
+main div {
+  position: relative;
+}
+
+main section#hero {
+  position: relative;
+  height: 100vh;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: url(../img/hero2.jpg);
+  background-size: cover;
+}
+
+main section#hero h1 {
+  color: #23f4f6;
+  font-size: 4rem;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  main section#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+main section#hero img {
+  z-index: 1;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  main section#hero img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main section#hero p {
+  display: inline;
+  color: #23f4f6;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  main section#hero p {
+    font-size: 1rem;
+  }
+}
+
+main section#hero div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main section#hero div.rounded-circle {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(46%, rgba(240, 240, 240, 0.94)), to(black));
+  background: linear-gradient(rgba(240, 240, 240, 0.94) 46%, black);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  main section#hero div.rounded-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main section.dark {
+  position: relative;
+  height: 500px;
+  background-color: rgba(94, 91, 91, 0.93);
+  overflow-y: scroll;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,73 @@
+$light: rgba(240, 240, 240, .93);
+$dark: rgba(94, 91, 91, 0.93);
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap');
+$small-device: 768px;
+@mixin small-device {
+    @media(max-width: #{$small-device}) {
+        @content;
+    }
+}
+
+main {
+    div {
+        position: relative;
+    }
+    section#hero {
+        position: relative;
+        height: 100vh;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        background: url(../img/hero2.jpg);
+        background-size: cover;
+        h1 {
+            color: #23f4f6;
+            font-size: 4rem;
+            margin: auto;
+            margin-bottom: 30px;
+            @include small-device {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+        }
+        img {
+            z-index: 1;
+            display: block;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: 300px;
+            @include small-device {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        p {
+            display: inline;
+            color: #23f4f6;
+            font-size: 1.5rem;
+            @include small-device {
+                font-size: 1rem;
+            }
+        }
+        div {
+            width: fit-content;
+        }
+        div.rounded-circle {
+            background: linear-gradient(rgba(240, 240, 240, .94) 46%, rgb(0, 0, 0));
+            overflow: hidden;
+            @include small-device {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+    section.dark {
+        position: relative;
+        height: 500px;
+        background-color: $dark;
+        overflow-y: scroll;
+    }
+}
