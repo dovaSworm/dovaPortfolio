@@ -11,6 +11,36 @@ $small-device: 768px;
     }
 }
 
+@keyframes yourAnimation2 {
+    0% {
+        transform: rotate(0) translateX(-80%);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes yourAnimation {
+    0% {
+        transform: rotate(0) translateY(90%);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+div.anima {
+    animation: yourAnimation 1s forwards 0s ease;
+    div.m-auto:last-child {
+        opacity: 0;
+        animation: yourAnimation2 1s forwards 1s ease;
+    }
+}
+
 main {
     div {
         position: relative;
@@ -18,7 +48,7 @@ main {
     section#hero {
         position: relative;
         height: 100vh;
-        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        // clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
         background: url(../img/hero2.jpg);
         background-size: cover;
         h1 {
@@ -56,7 +86,9 @@ main {
             width: fit-content;
         }
         div.rounded-circle {
-            background: linear-gradient(rgba(240, 240, 240, .94) 46%, rgb(0, 0, 0));
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(rgba(240, 240, 240, .94) 46%, rgb(51, 50, 50));
             overflow: hidden;
             @include small-device {
                 width: 200px;
