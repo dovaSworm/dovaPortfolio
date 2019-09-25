@@ -1,16 +1,4 @@
-$light: rgba(240, 240, 240, .93);
-$dark: rgba(94, 91, 91, 0.93);
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap');
-$small-device: 768px;
-@mixin small-device {
-    @media(max-width: #{$small-device}) {
-        @content;
-    }
-}
-
+@import'mixin';
 @keyframes yourAnimation2 {
     0% {
         transform: rotate(0) translateX(-80%);
@@ -34,10 +22,10 @@ $small-device: 768px;
 }
 
 div.anima {
-    animation: yourAnimation 1s forwards 0s ease;
+    animation: yourAnimation 1s forwards .5s ease;
     div.m-auto:last-child {
         opacity: 0;
-        animation: yourAnimation2 1s forwards 1s ease;
+        animation: yourAnimation2 1s forwards 1.5s ease;
     }
 }
 
@@ -45,11 +33,15 @@ main {
     div {
         position: relative;
     }
+    // SKILLS SECTION
     section#hero {
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         position: relative;
         height: 100vh;
         // clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        background: url(../img/hero2.jpg);
+        background: url(../img/cobweb-3724148_1920.jpg);
+        background-attachment: fixed;
+        background-position: center;
         background-size: cover;
         h1 {
             color: #23f4f6;
@@ -67,11 +59,11 @@ main {
             margin-top: 20px;
             margin-left: auto;
             margin-right: auto;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             @include small-device {
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
             }
         }
         p {
@@ -86,20 +78,81 @@ main {
             width: fit-content;
         }
         div.rounded-circle {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: linear-gradient(rgba(240, 240, 240, .94) 46%, rgb(51, 50, 50));
             overflow: hidden;
             @include small-device {
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
             }
         }
     }
-    section.dark {
-        position: relative;
-        height: 500px;
-        background-color: $dark;
-        overflow-y: scroll;
+    section#hero:before {
+        // margin-top: -45%;
+        top: 0;
+        left: 0;
+        // clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        background: rgba(10, 9, 12, 0.85)
+    }
+    // SKILLS SECTION
+    section#skills {
+        h2 {
+            z-index: 2;
+            position: relative;
+        }
+        img {
+            width: 150px;
+            border-radius: 50%;
+            background: white;
+            @include small-device {
+                width: 100px;
+            }
+        }
+        li.text-right {
+            color: #ea6262;
+        }
+        li.text-left:nth-child(odd) {
+            color: #4dca6f;
+        }
+        div.text-center {
+            margin-top: 40px;
+        }
+        div.container:before {
+            top: 0;
+            left: 0;
+            // clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+            z-index: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, 0.92);
+        }
+        div.text-center:nth-child(odd) {
+            margin-top: 80px;
+            position: absolute;
+            z-index: -1;
+        }
+        li.text-left,
+        li.text-right {
+            margin-left: 20%;
+            margin-right: 20%;
+            @include small-device {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+        // background: url(../img/stackback.png);
+        // background-attachment: fixed;
+        // background-position: center;
+        // background-size: cover;
     }
 }

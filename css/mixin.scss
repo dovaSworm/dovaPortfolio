@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap');
+$small-device: 768px;
+@mixin small-device {
+    @media(max-width: #{$small-device}) {
+        @content;
+    }
+}
+
+$main-back-color: #01040a;
+$light: rgba(240,
+240,
+240,
+.93);
+$dark: rgba(94,
+91,
+91,
+0.93);

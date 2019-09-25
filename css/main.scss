@@ -1,33 +1,32 @@
-$main-back-color: linear-gradient(45deg, rgb(4, 4, 4), transparent),
-linear-gradient(-45deg, rgb(4, 4, 4), transparent),
-linear-gradient(135deg, rgb(4, 4, 4), transparent),
-linear-gradient(135deg, rgb(4, 4, 4), transparent);
-$small-device: 768px;
-@mixin small-device {
-    @media(max-width: #{$small-device}) {
-        @content;
-    }
-}
-
+@import 'mixin';
 body {
     font-family: 'Montserrat';
     color: white;
     box-sizing: border-box;
-    background: $main-back-color;
+    // background-image: repeating-linear-gradient(190deg, red, yellow 7%, green 2%);
+    background: #000001;
+    // background: white;
     @include small-device {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     section {
-        height: 600px;
-        padding-top: 100px;
-        @include small-device {
-            margin-top: 20px;
+        div.container {
+            padding-top: 30px;
+            @include small-device {
+                padding-top: 10px;
+            }
         }
         h2 {
+            color: #31adde;
             margin-top: 30px;
+        }
+        h3 {
+            color: #ebf747;
+            margin-bottom: 30px;
         }
     }
     ul {
+        padding-inline-start: 0!important;
         text-decoration: none;
         list-style: none;
     }
