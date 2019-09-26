@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat';
     color: white;
     box-sizing: border-box;
-    // background-image: repeating-linear-gradient(190deg, red, yellow 7%, green 2%);
+    // background-image: repeating-linear-gradient(190deg, red, yellow 7%, green 50px);
     background: #000001;
     // background: white;
     @include small-device {
@@ -25,9 +25,35 @@ body {
             margin-bottom: 30px;
         }
     }
+    p {
+        text-align: justify;
+        padding: 10px;
+        margin: 20px 5px;
+    }
     ul {
         padding-inline-start: 0!important;
         text-decoration: none;
         list-style: none;
+    }
+    .col,
+    >[class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    //////CLASSES????????????????????????????????????????????????????????
+    *.c {
+        color: #ea6262;
+    }
+    *.z {
+        color: #4dca6f;
+    }
+    *.p {
+        color: #31adde;
+    }
+    *.x {
+        color: #ebf747;
+    }
+    *.r {
+        color: pink;
     }
 }

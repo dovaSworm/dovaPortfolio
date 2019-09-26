@@ -172,14 +172,6 @@ main section#skills img {
   }
 }
 
-main section#skills li.text-right {
-  color: #ea6262;
-}
-
-main section#skills li.text-left:nth-child(odd) {
-  color: #4dca6f;
-}
-
 main section#skills div.text-center {
   margin-top: 40px;
 }
@@ -214,5 +206,58 @@ main section#skills li.text-right {
     margin-left: 5%;
     margin-right: 5%;
   }
+}
+
+main #portfolio {
+  height: 100%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+main #portfolio img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+main #portfolio img:hover {
+  z-index: 1111;
+  width: 140%;
+  cursor: pointer;
+  position: absolute;
+}
+
+main #portfolio p {
+  height: 98px;
+}
+
+main #portfolio img#zadnji:hover {
+  right: 0;
+}
+
+main #portfolio div.row {
+  height: 450px;
+}
+
+@media (max-width: 768px) {
+  main #portfolio div.row {
+    height: 100%;
+  }
+}
+
+main #portfolio div.col-lg-4 {
+  height: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  main #portfolio div.col-lg-4 {
+    padding: 2px;
+  }
+}
+
+main #about {
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */

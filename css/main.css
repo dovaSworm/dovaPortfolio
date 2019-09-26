@@ -36,10 +36,42 @@ body section h3 {
   margin-bottom: 30px;
 }
 
+body p {
+  text-align: justify;
+  padding: 10px;
+  margin: 20px 5px;
+}
+
 body ul {
   -webkit-padding-start: 0 !important;
           padding-inline-start: 0 !important;
   text-decoration: none;
   list-style: none;
+}
+
+body .col,
+body > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body *.c {
+  color: #ea6262;
+}
+
+body *.z {
+  color: #4dca6f;
+}
+
+body *.p {
+  color: #31adde;
+}
+
+body *.x {
+  color: #ebf747;
+}
+
+body *.r {
+  color: pink;
 }
 /*# sourceMappingURL=main.css.map */

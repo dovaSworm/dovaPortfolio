@@ -115,12 +115,6 @@ main {
                 width: 100px;
             }
         }
-        li.text-right {
-            color: #ea6262;
-        }
-        li.text-left:nth-child(odd) {
-            color: #4dca6f;
-        }
         div.text-center {
             margin-top: 40px;
         }
@@ -154,5 +148,46 @@ main {
         // background-attachment: fixed;
         // background-position: center;
         // background-size: cover;
+    }
+    ////////////PORTFOLIO?????????????????????????????????????????????????????????
+    #portfolio {
+        height: 100%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            &:hover {
+                z-index: 1111;
+                width: 140%;
+                cursor: pointer;
+                position: absolute;
+            }
+        }
+        p {
+            height: 98px;
+        }
+        img#zadnji:hover {
+            right: 0;
+        }
+        div.row {
+            height: 450px;
+            @include small-device {
+                height: 100%;
+            }
+        }
+        div.col-lg-4 {
+            height: 100%;
+            padding: 10px;
+            @include small-device {
+                padding: 2px;
+            }
+        }
+    }
+    /////ABOUT////////////////////////////////////////////////////////////////////////////
+    #about {
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 }
