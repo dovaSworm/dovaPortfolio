@@ -16,6 +16,85 @@ body {
   }
 }
 
+body h2 {
+  color: #31adde;
+  margin-top: 30px;
+}
+
+body h3 {
+  color: #ebf747;
+  margin-bottom: 30px;
+}
+
+body h2:after {
+  top: -60px;
+  left: 40%;
+  content: "";
+  width: 20%;
+  background: #31adde;
+  height: 3px;
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  body h2:after {
+    width: 65%;
+    left: 16%;
+  }
+}
+
+body h2:before {
+  top: 8px;
+  left: 40%;
+  content: "";
+  width: 3px;
+  background: #31adde;
+  height: 30px;
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  body h2:before {
+    top: 8px;
+    left: 16%;
+  }
+}
+
+body div.xxx {
+  margin-top: 15px;
+  width: 20%;
+  margin-left: 40%;
+  height: 3px;
+  background: #31adde;
+}
+
+@media (max-width: 768px) {
+  body div.xxx {
+    width: 65%;
+    margin-left: 16%;
+  }
+}
+
+body div.xxx:before {
+  top: -27px;
+  right: 0;
+  content: "";
+  width: 3px;
+  background: #31adde;
+  height: 30px;
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  body div.xxx:before {
+    top: -30px;
+    height: 30px;
+  }
+}
+
 body section div.container {
   padding-top: 30px;
 }
@@ -26,20 +105,8 @@ body section div.container {
   }
 }
 
-body section h2 {
-  color: #31adde;
-  margin-top: 30px;
-}
-
-body section h3 {
-  color: #ebf747;
-  margin-bottom: 30px;
-}
-
 body p {
   text-align: justify;
-  padding: 10px;
-  margin: 20px 5px;
 }
 
 body ul {
@@ -73,5 +140,24 @@ body *.x {
 
 body *.r {
   color: pink;
+}
+
+body div {
+  position: relative;
+}
+
+body a {
+  color: inherit;
+}
+
+body a:hover {
+  text-decoration: none;
+  color: #31adde;
+}
+
+#about p,
+#portfolio p {
+  padding: 10px;
+  margin: 20px 5px;
 }
 /*# sourceMappingURL=main.css.map */

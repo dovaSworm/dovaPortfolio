@@ -7,7 +7,7 @@ $(function() {
     }
 
     $(window).on('activate.bs.scrollspy', function(e, obj) {
-        console.log(obj.relatedTarget);
+        // console.log(obj.relatedTarget);
         $.each($("a.nav-link"), function(i, val) {
             if (obj.relatedTarget === $(this).attr("href")) {
                 var col = $(this).css("color");

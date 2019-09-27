@@ -1,9 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap");
 footer {
-  height: 200px;
+  background-color: #01040a;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+  footer {
+    -webkit-clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(6% 0, 94% 0, 100% 100%, 0% 100%);
+  }
 }
 
 footer a img {
   margin: auto;
-  height: 100px;
+  width: 200px;
+}
+
+footer div.x {
+  font-size: 12px;
+  margin: 15px 0;
 }
 /*# sourceMappingURL=footer.css.map */

@@ -64,8 +64,8 @@ div.anima div.m-auto:last-child {
           animation: yourAnimation2 1s forwards 1.5s ease;
 }
 
-main div {
-  position: relative;
+div.anima.m-auto {
+  opacity: 0;
 }
 
 main section#hero {
@@ -77,6 +77,12 @@ main section#hero {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 768px) {
+  main section#hero {
+    height: 80vh;
+  }
 }
 
 main section#hero h1 {
@@ -161,14 +167,14 @@ main section#skills h2 {
 }
 
 main section#skills img {
-  width: 150px;
+  width: 24%;
   border-radius: 50%;
   background: white;
 }
 
 @media (max-width: 768px) {
   main section#skills img {
-    width: 100px;
+    width: 33%;
   }
 }
 
@@ -189,9 +195,16 @@ main section#skills div.container:before {
 }
 
 main section#skills div.text-center:nth-child(odd) {
+  margin-left: -70px;
   margin-top: 80px;
   position: absolute;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  main section#skills div.text-center:nth-child(odd) {
+    margin-left: 2px;
+  }
 }
 
 main section#skills li.text-left,
@@ -231,12 +244,31 @@ main #portfolio p {
   height: 98px;
 }
 
+@media (max-width: 768px) {
+  main #portfolio p {
+    height: 100%;
+  }
+}
+
+main #portfolio p::after {
+  left: 45%;
+  -webkit-clip-path: polygon(53% 88%, 0 0, 100% 0);
+          clip-path: polygon(53% 88%, 0 0, 100% 0);
+  z-index: 0;
+  display: block;
+  width: 30px;
+  height: 20px;
+  content: "";
+  position: absolute;
+  background: #4dca6f;
+}
+
 main #portfolio img#zadnji:hover {
   right: 0;
 }
 
 main #portfolio div.row {
-  height: 450px;
+  height: 550px;
 }
 
 @media (max-width: 768px) {
@@ -257,7 +289,57 @@ main #portfolio div.col-lg-4 {
 }
 
 main #about {
+  background: url(../img/5.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin-top: 40px;
   margin-bottom: 30px;
+}
+
+main #about div.container > *,
+main #about h2 {
+  position: relative;
+  z-index: 2;
+}
+
+main #about div.container:after {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+main #about h3 {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  main #about h3 {
+    margin-top: 15px;
+  }
+}
+
+#contact {
+  margin-bottom: 20px;
+}
+
+#contact h4 {
+  border-bottom: 2px solid;
+}
+
+#contact .row {
+  margin-top: 30px;
+}
+
+#contact p {
+  padding: 0 10px;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */
